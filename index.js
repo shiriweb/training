@@ -221,7 +221,7 @@
 //     age : 23
 // };
 
-// // delete is an unary operator
+// delete is an unary operator in js
 // delete obj.name;
 // console.log(obj);
 
