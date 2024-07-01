@@ -335,29 +335,78 @@
 // }
 
 // example 3
-let status = 400;
+// let status = 400;
 
-switch(status){
-    case 201:
-        console.log("Created");
-        break;
+// switch(status){
+//     case 201:
+//         console.log("Created");
+//         break;
 
-    case 400:
-        console.log("Bad Request");
-        break;
+//     case 400:
+//         console.log("Bad Request");
+//         break;
 
-    case 403:
-        console.log("ForBidden");
-        break;
+//     case 403:
+//         console.log("ForBidden");
+//         break;
 
-    case 500:
-        console.log("Internal Server Error");
-        break;
+//     case 500:
+//         console.log("Internal Server Error");
+//         break;
 
-    // case :
-    //     console.log("Created");
-    //     break;
+//     default:
+//         console.log("Invalid Status");
+// }
 
-    default:
-        console.log("Invalid Status");
-}
+// loop 
+// for loop
+
+// for(let i = 0; i <= 10; i++){
+//     console.log("I love JS" + i);
+// }
+
+// for(let i = 1; i<=9 ; i++){
+//     console.log(i);
+// } 
+
+// for(let a = 1 ; a<= 10; a++){
+//     console.log(`2 * ${a} = ${ 2 * a}`);
+// }
+
+// even number
+// for(let i = 0; i<= 20; i++){
+//     if(i%2 === 0){
+//         console.log(`Even Numbers is: ${i}`);
+//     }
+// }
+
+// for(let i = 0; i<= 20; i++){
+//     if(i%2 === 1){
+//         console.log(`Odd Numbers is: ${i}`);
+//     }
+// }
+
+
+// array in JS
+
+// const array = [2,4,4,6,7];
+// let sum = 0;
+// for(let i = 0; i < array.length; i++){
+//     sum += array[i];
+// }
+// console.log(`The sum of Array: ${sum}`);
+
+
+// while in JS
+// let i = 0;
+// while(i <= 10){
+//     console.log(i);
+//     i++;
+// }
+
+// do while in JS
+let i = 0;
+do{
+    console.log(i);
+    i++
+}while(i<= 20);
