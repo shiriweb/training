@@ -359,7 +359,7 @@
 // }
 
 // loop 
-// for loop
+// for loop in JS
 
 // for(let i = 0; i <= 10; i++){
 //     console.log("I love JS" + i);
@@ -405,8 +405,14 @@
 // }
 
 // do while in JS
-let i = 0;
-do{
-    console.log(i);
-    i++
-}while(i<= 20);
+// let i = 0;
+// do{
+//     console.log(i);
+//     i++;
+// }while(i<= 20);
+
+const array =[3,2,3,4,6,2];
+console.log(array);
+console.log(array[2]);
+console.log(typeof array);
+
