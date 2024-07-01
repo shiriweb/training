@@ -225,3 +225,139 @@
 // delete obj.name;
 // console.log(obj);
 
+// conditional statement
+// example1
+// let email = "kirankc@gmail.com";
+// let password = "12345";
+// if(email === "kirankc@gmail.com" && password === "12345"){
+//     console.log("Login Successfully");
+// } else {
+//     console.log("Invalid Information");
+// }
+
+// SEE Grade Check
+// example 2
+// let grade = 60;
+
+// if(grade >= 90){
+//     console.log("Grade : A+");
+// }else if(grade >= 80){
+//     console.log("Grade : A");
+// }else if(grade >= 70){
+//     console.log("Grade : B+");
+// }else if(grade >= 60){
+//     console.log("Grade : B");
+// }else if(grade >= 50){
+//     console.log("Grade : C");
+// }else if(grade >= 40){
+//     console.log("Grade : D");
+// } else {
+//     console.log("Failed");
+// }
+
+// Weather Check
+// example 3
+// let weather = "Sunny";
+// if(weather === "Sunny"){
+//     console.log("Today is sunny");
+// }else if(weather === "Rainy"){
+//     console.log("Today is rainy");
+// }else if(weather === "Windy"){
+//     console.log("Today is windy");
+// }else if(weather === "Cloudy"){
+//     console.log("Today is cloudy");
+// }else {
+//     console.log("Invalid weather");
+// }
+
+// Control Statement
+// switch case
+
+// example 1
+// let role ="super admin";
+// switch (role) {
+//     case "buyer":
+//         console.log("You can only buy product");
+//         break;
+    
+//     case "seller":
+//         console.log("You can sell your product");
+//         break;
+    
+//     case "admin":
+//         console.log("You can add your product");
+//         break;
+
+//     case "super admin":
+//         console.log("You can access everything");
+//         break;
+//     default:
+//         console.log("Invalid role");
+//         break;
+// } 
+
+
+// example 2
+// let date = new Date().getDay();
+// console.log(date);
+
+// switch(date){
+//     case 0:
+//         console.log("Sunday");
+//         break;
+
+//     case 1:
+//         console.log("Monday");
+//         break;
+
+//     case 2:
+//         console.log("Tuesday");
+//         break;
+    
+//     case 3:
+//         console.log("Wednesday");
+//         break;
+                
+//     case 4:
+//         console.log("Thursday");
+//         break;
+        
+//     case 5:
+//         console.log("Friday");
+//         break;
+
+//     case 6:
+//         console.log("Saturday");
+//         break;
+
+//     default:
+//         console.log("Invalid Result");
+// }
+
+// example 3
+let status = 400;
+
+switch(status){
+    case 201:
+        console.log("Created");
+        break;
+
+    case 400:
+        console.log("Bad Request");
+        break;
+
+    case 403:
+        console.log("ForBidden");
+        break;
+
+    case 500:
+        console.log("Internal Server Error");
+        break;
+
+    // case :
+    //     console.log("Created");
+    //     break;
+
+    default:
+        console.log("Invalid Status");
+}
