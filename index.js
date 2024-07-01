@@ -255,7 +255,7 @@
 //     console.log("Failed");
 // }
 
-// Weather Check
+// Weather  Check
 // example 3
 // let weather = "Sunny";
 // if(weather === "Sunny"){
