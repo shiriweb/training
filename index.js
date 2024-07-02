@@ -411,8 +411,150 @@
 //     i++;
 // }while(i<= 20);
 
-const array =[3,2,3,4,6,2];
-console.log(array);
-console.log(array[2]);
-console.log(typeof array);
+// Array
+// const array =[3,2,3,4,6,2, "box", "apple"]; //data structure to store a multiple value 
+// console.log(array);
+// console.log(array[3]);
+// console.log(typeof array);
 
+
+// length of an array
+// const array =[3,4,5,3,2,1,4,5];
+// console.log(array.length);
+
+// push
+// let result = array.push(34);
+// console.log(array);
+// console.log(result);
+
+// pop ->removes data at present at last
+// let arr = array.pop();
+// console.log(array);
+
+
+// shift
+// array.shift();
+// console.log(array);
+
+// unshift
+// array.unshift(100);
+// console.log(array);
+
+// includes
+// let result = array.includes(3);
+// console.log(result);
+
+// join
+// const output = ["Ajha","Pani","Parxha","Ra?"];
+// console.log(output.join(" "));
+
+// const array =[3,4,5,3,2,1,4,5];
+
+// splice
+// array.splice(2,5);
+// console.log(array);
+
+// slice
+// let result = array.slice(1,4);
+// console.log(result);
+
+// indexof
+// let output = array.indexOf(3);
+// console.log(output);
+
+// lastIndexOf
+// let output = array.lastIndexOf(3);
+// console.log(output);
+
+
+// let arr = [];
+// let sum = 0;
+// for (let i = 1; i<=10; i++){
+//     arr.push(i);
+// }
+
+// // console.log(arr);
+
+// for(let i = 1; i<arr.length; i++){
+//     sum += arr[i];
+// }
+
+// let result = sum *2;
+
+// console.log(`The sum of the array is: ${sum}`);
+// console.log(`The multiply of the array is: ${result}`);
+
+
+
+// object in JS
+// const person ={
+//     name : "Ram Kc",
+//     age : 24,
+//     education : "BCA",
+//     isMarried : false,
+
+//     address: {
+//         street :"Kalimati",
+//         city: "Kathmandu",
+//         country: "Nepal"
+//     },
+
+//     greet: function(){
+//         console.log(`Hello My name is :${this.name}. And I am ${this.age}`);
+//     },
+// };
+
+// const {
+//     name,
+//     age,
+//     education,
+//     isMarried,
+//     address: {street,city,country},
+// } = person;
+// console.log(person);
+// person.greet();
+// console.log(name,age,education,isMarried,street,city,country);
+
+// function in JS-> works as an input means takes parameters and output  , reuseability of piece of code
+
+// function myFunction(){
+//     console.log("This is a function");
+// }
+// myFunction()
+
+
+// passing the parameters in a function
+// function myFunction(a,b){
+//     return a + b ;
+// }
+// let result = myFunction(6,7);
+// console.log(`THe sum of the two numbers are: ${result}`);
+
+
+// function myFunction(radius){
+//     return Math.PI * radius * radius;
+// }
+// let result = myFunction(5);
+// console.log(`THe area of the circle is : ${result}`);
+
+
+// CalculateTotal
+function CalculateTotal(cartItems, taxRate){
+    let total = 0;
+    for (let i = 0; i<cartItems.length; i++){
+        total += cartItems[i].price *cartItems[i].quantity;
+    }
+     
+    total += total *taxRate;
+    return total;
+}
+
+let cart =[
+    {name : "Ram", price : 45000,  quantity : 5},
+    {name : "Sam", price : 5000,  quantity : 4},
+    {name : "Sita", price : 450000,  quantity : 5},
+    {name : "Hari", price : 300000,  quantity : 2},
+];
+
+const result = CalculateTotal(cart , 0.02);
+console.log(`Your total payment is : ${result}`);
