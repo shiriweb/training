@@ -542,10 +542,10 @@
 function CalculateTotal(cartItems, taxRate){
     let total = 0;
     for (let i = 0; i<cartItems.length; i++){
-        total += cartItems[i].price *cartItems[i].quantity;
+        total += cartItems[i].price * cartItems[i].quantity;
     }
      
-    total += total *taxRate ;
+    total += total * taxRate ;
     return total;
 }
 
