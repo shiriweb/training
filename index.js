@@ -545,11 +545,11 @@ function CalculateTotal(cartItems, taxRate){
         total += cartItems[i].price *cartItems[i].quantity;
     }
      
-    total += total *taxRate;
+    total += total *taxRate ;
     return total;
 }
 
-let cart =[
+let cart = [
     {name : "Ram", price : 45000,  quantity : 5},
     {name : "Sam", price : 5000,  quantity : 4},
     {name : "Sita", price : 450000,  quantity : 5},
