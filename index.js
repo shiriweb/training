@@ -539,22 +539,159 @@
 
 
 // CalculateTotal
-function CalculateTotal(cartItems, taxRate){
-    let total = 0;
-    for (let i = 0; i<cartItems.length; i++){
-        total += cartItems[i].price * cartItems[i].quantity;
-    }
+// function CalculateTotal(cartItems, taxRate){
+//     let total = 0;
+//     for (let i = 0; i<cartItems.length; i++){
+//         total += cartItems[i].price * cartItems[i].quantity;
+//     }
      
-    total += total * taxRate ;
-    return total;
+//     total += total * taxRate ;
+//     return total;
+// }
+
+// let cart = [
+//     {name : "Ram", price : 45000,  quantity : 5},
+//     {name : "Sam", price : 5000,  quantity : 4},
+//     {name : "Sita", price : 450000,  quantity : 5},
+//     {name : "Hari", price : 300000,  quantity : 2},
+// ];
+
+// const result = CalculateTotal(cart , 0.02);
+// console.log(`Your total payment is : ${result}`);
+
+
+// // function
+// function myFunction(){
+//     let a = prompt("Enter first number");
+//     let b = prompt("Enter second number");
+//     let result = Number(a) + Number(b);
+//     if(result){
+//         alert(`The sum of two numbers are: ${result}`);
+//     }
+// }
+
+// myFunction();
+
+
+//Scoping
+//global scope
+// var x = 90;
+// let y = 78;
+// const z = 12;
+// function myFunction(){
+//     console.log(x,y,z);
+// }
+// myFunction();
+
+
+// function scope
+// function myFunction(){
+//     var x = 90;
+//     let y = 78;
+//     const z = 12;
+//     console.log(x,y,z);
+// }
+// myFunction();
+
+
+// function myFunction(){
+//     if(true){
+//     var x = 90;
+//     let y = 78;
+//     const z = 12;
+//     console.log(y); //let and const is a block scope can be used within { }
+//     console.log(z);
+//     }
+//     console.log(x); //var is function scope
+// }
+// myFunction();
+
+// DOM
+// console.log(document.body); //document is the object of JS which help in accessing the element of an object
+
+let result = document.getElementById("hello");
+// console.log(result);
+
+result.innerText ="I am learing JS";
+result.style.backgroundColor = "yellow";
+result.style.color = "green";
+result.style.textAlign = "center";
+
+
+let output = document.getElementsByClassName("myClass")[0]; //accessing using index
+// console.log(output);
+
+output.innerText ="I have a car";
+output.style.backgroundColor = "orange";
+output.style.color = "black";
+output.style.textAlign = "center";
+
+
+let ans = document.getElementsByClassName("myClass"); //accessing using index
+// console.log(ans);
+
+ans[1].innerText ="I hava a bus";
+ans[1].style.backgroundColor = "blue";
+ans[1].style.color = "white";
+ans[1].style.textAlign = "center";
+
+
+//span
+let output1 = document.getElementsByTagName("span"); //accessing using index
+// console.log(output1[0]);
+
+output1[0].innerText ="Khana Khayou";
+output1[0].style.backgroundColor = "green";
+output1[0].style.color = "white";
+output1[0].style.textAlign = "center";
+
+
+let outputs = document.getElementsByTagName("span"); //accessing using index
+// console.log(outputs[1]);
+
+outputs[1].innerText ="Kata pauncha job?";
+outputs[1].style.backgroundColor = "purple";
+outputs[1].style.color = "white";
+outputs[1].style.textAlign = "center";
+
+
+let answer = document.getElementsByName("email"); //accessing using index
+console.log(answer[0]);
+
+
+let x = document.querySelector("#btnAdd");
+x.style.backgroundColor = "green";
+x.style.color = "white";
+x.style.padding = "2vmax 4vmax";
+x.style.cursor = "pointer";
+x.style.border = "none";
+// console.log(x);
+x.setAttribute("class", "meroClass");
+console.log(x.getAttribute("class"));
+
+let y = document.querySelector(".btnDelete");
+y.style.backgroundColor = "red";
+y.style.color = "white";
+y.style.padding = "2vmax 4vmax";
+y.style.cursor = "pointer";
+y.style.border = "none";
+console.log(y);
+
+
+// let display = document.createElement("h1");
+// display.innerText = "This ia a new element";
+// document.body.append(display);  //creating element in bottom
+// document.body.prepend(display); //creating element in top
+
+function addTask(){
+    let display = document.createElement("h1");
+    display.innerText = "This ia a new element";
+    document.body.prepend(display); //creating element in top
 }
 
-let cart = [
-    {name : "Ram", price : 45000,  quantity : 5},
-    {name : "Sam", price : 5000,  quantity : 4},
-    {name : "Sita", price : 450000,  quantity : 5},
-    {name : "Hari", price : 300000,  quantity : 2},
-];
-
-const result = CalculateTotal(cart , 0.02);
-console.log(`Your total payment is : ${result}`);
+function deleteTask(){
+    let h1 = document.querySelector("h1");
+    h1.remove();
+}
+x.onclick = addTask;
+y.onclick = deleteTask;
