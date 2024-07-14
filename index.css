@@ -3,3 +3,13 @@
     color: red;
     background-color: yellow;
 }
+
+.classBox {
+    background-color: red;
+    padding: 20px;
+    width: 500px;
+    height: 60%;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
