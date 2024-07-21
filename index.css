@@ -13,3 +13,9 @@
     cursor: pointer;
     border: none;
 }
+
+.clock{
+    font-size: 70px;
+    text-align: center;
+    margin-top: 30px;
+}
