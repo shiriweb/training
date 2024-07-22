@@ -1056,6 +1056,15 @@ const addForm = document.querySelector("#addForm");
 const customerName = document.querySelector("#customerName");
 const balance = document.querySelector("#balance");
 
+const depositForm = document.querySelector("#depositForm");
+const accountNumber = document.querySelector("#accountNumber");
+const amount = document.querySelector("#amount");
+// console.log(depositForm, accountNumber, amount);
+
+const withdrawForm = document.querySelector("#withdrawForm");
+const withdrawAccountNumber = document.querySelector("#withdrawAccountNumber");
+const withdrawAmount = document.querySelector("#withdrawAmount");
+
 let accounts = [];
 addForm.addEventListener("submit", (e)=>{
     e.preventDefault();
@@ -1064,6 +1073,29 @@ addForm.addEventListener("submit", (e)=>{
 
     console.log(accounts);
 });
+
+depositForm.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    let account = accounts.find(
+        (account) => account.accountNumber === +accountNumber.value
+    );
+    account.deposit(+amount.value);
+
+    console.log(accounts);
+});
+
+
+withdrawForm.addEventListener("submit", (e)=> {
+    e.preventDefault();
+
+    let account = accounts.find(
+        (account) => account.accountNumber === +withdrawAccountNumber.value
+    );
+
+    account.withdraw(+withdrawAmount.value);
+    console.log(accounts);
+});
+
 // console.log(addForm);
 // console.log(customerName);
 // console.log(balance);
