@@ -1144,7 +1144,7 @@ class BankAccount{
     constructor(customerName, balance = 0){
         this.customerName = customerName;
         this.balance = balance;
-        this.accountNumber = Math.floor(Math.random() * 1000000000);
+        this.accountNumber =  Math.floor(Math.random() * 1000000000);
 
     }
     deposit(amount){
