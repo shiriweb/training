@@ -1145,19 +1145,51 @@ class BankAccount{
         this.customerName = customerName;
         this.balance = balance;
         this.accountNumber =  Math.floor(Math.random() * 1000000000);
-
     }
     deposit(amount){
         this.balance += amount;
     }
 
     withdraw(amount){
-        this.balance += amount;
+        this.balance -= amount;
     }
 }
 
-const ramAccount = new BankAccount("Ram", 200000);
-const samAccount = new BankAccount("Sam", 200000);
+
+class currentAccount extends BankAccount{
+    constructor(customerName, balance){
+        super(customerName, balance)
+    }
+
+    takeBusinessLoan(amount, taxrate){
+        let loan = amount +(amount*taxrate)/100;
+        console.log(`Including Interest  ${loan}`);
+
+
+    }
+}
+
+
+class savingAccount extends BankAccount{
+    constructor(customerName, balance){
+        super(customerName, balance)
+    }
+
+    personalLoan(amount, taxrate){
+        let loan = amount + (amount * taxrate) /100;
+        console.log(`Amount Including Interest is ${loan}`);
+    }
+}
+
+const ramAccount = new savingAccount("Ram" , 200000);
+const samAccount = new savingAccount("Sam" , 200000);
+
+
 ramAccount.deposit(200);
 ramAccount.deposit(600);
+ramAccount.personalLoan(900000,10);
+samAccount.personalLoan(40000,10);
 console.log(ramAccount, samAccount);
+
+
+
