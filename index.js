@@ -1252,6 +1252,7 @@ class User{
     }
 }
 
+
 let user1 = new User ("Ram", "Kalimati", 29) ;
 let user2 = new User ("Sam", "Kalimati", 9) ;
 let user3 = new User ("Hari", "Kalimati", 10) ;
